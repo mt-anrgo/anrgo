@@ -1,0 +1,347 @@
+/* Reset một số style mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo 2', sans-serif;
+    background-color: #f0f8ff;
+}
+/* Áp dụng cho tất cả các phần tử tên web và nút */
+nav .logo, 
+nav .menu a, 
+.start-learning-btn {
+    user-select: none; /* Ngăn người dùng chọn văn bản */
+}
+
+/* Thanh điều hướng */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(6, 67, 133, 0.8);
+    padding: 20px 50px;
+}
+
+nav .logo {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-left: 20px;
+}
+
+nav .menu {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+nav .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav .menu a:hover {
+    background-color: rgb(24, 39, 55);
+    transform: scale(1.1);
+}
+
+/* Nút Bắt Đầu Học */
+.start-learning-btn {
+    background-color: #28a745;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.start-learning-btn:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+.slogan-text h1, .slogan-text h2 {
+    user-select: none; /* Ngăn người dùng chọn văn bản */
+}
+
+/* Phần slogan */
+.slogan-container {
+    display: flex;
+    justify-content: space-between; /* Chia hai phần: text bên trái, khoảng trống bên phải */
+    align-items: flex-start;
+    padding: 50px; /* Khoảng cách trên và dưới */
+}
+
+.slogan-text {
+    width: 60%; /* Chiếm 60% chiều ngang màn hình */
+    text-align: left; /* Căn trái nội dung */
+}
+
+.slogan-text h1 {
+    font-size: 48px; /* Kích thước lớn hơn h2 */
+    font-weight: 700;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng chữ */
+    animation: fadeIn 1.2s ease-in-out; /* Hiệu ứng xuất hiện chữ */
+    margin-bottom: 15px;
+    line-height: 1.4; /* Khoảng cách giữa các dòng */
+    text-align: left; /* Căn trái nội dung */
+}
+
+.slogan-text h1 .highlight {
+    color: #ff6347; /* Màu cam để nổi bật từ ANRGO */
+    font-weight: 900; /* Chữ đậm hơn cho từ ANRGO */
+    text-transform: uppercase; /* Viết in hoa chữ ANRGO */
+    font-family: 'Montserrat', sans-serif; /* Phông chữ ấn tượng hơn cho chữ ANRGO */
+    animation: popIn 1s ease-out; /* Hiệu ứng bật lên của từ ANRGO */
+}
+
+.slogan-text h2 {
+    font-size: 28px; /* Nhỏ hơn h1 */
+    font-weight: 500;
+    color: #555;
+    font-family: 'Baloo 2', sans-serif;
+    margin-top: 10px;
+    animation: slideUp 1.5s ease-in-out; /* Hiệu ứng trượt lên */
+    line-height: 1.6; /* Khoảng cách giữa các dòng */
+    text-align: left; /* Căn trái nội dung */
+}
+
+/* Hiệu ứng xuất hiện dần của toàn bộ slogan */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hiệu ứng bật lên của từ ANRGO */
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hiệu ứng trượt từ dưới lên của câu thứ hai */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Nút Bắt Đầu - căn giữa */
+.start-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px 30px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 0px; /* Thêm khoảng cách giữa slogan và nút */
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    user-select: none; /* Ngăn người dùng chọn văn bản */
+}
+/* Tiêu đề "Tại sao nên sử dụng ANRGO" */
+.reasons-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 80px; /* Khoảng cách từ nút bắt đầu đến tiêu đề */
+    margin-bottom: 5px; /* Khoảng cách từ tiêu đề đến các ô lý do */
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+  }
+  
+  .reasons-title::before {
+    content: "\2022"; /* Sử dụng ký tự chấm tròn làm icon */
+    font-size: 50px;
+    color: #ff6347; /* Màu cam cho icon */
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .reasons-title .icon {
+    font-size: 28px;  /* Kích thước icon */
+    color: #ff6347;   /* Màu cam */
+    margin-right: 10px;
+  }
+/* Thiết kế phần container của lý do */
+.reasons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+  flex-wrap: wrap;
+}
+
+.start-btn:hover {
+    background-color: #218838;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.start-btn:active {
+    transform: translateY(2px);
+}
+
+/* Tăng hiệu ứng chữ */
+.start-btn {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Phần container cho các lý do */
+.reasons-container {
+    display: flex;                  /* Sử dụng Flexbox để xếp ngang */
+    justify-content: space-between;  /* Đảm bảo các ô được cách đều nhau */
+    gap: 20px;                       /* Khoảng cách giữa các ô */
+    width: 80%;                      /* Chiếm 80% chiều ngang */
+    margin: 0 auto;                  /* Căn giữa màn hình */
+    padding: 50px 0;
+    flex-wrap: wrap;                 /* Cho phép ô xuống dòng khi không đủ chỗ */
+  }
+  
+  /* Thiết kế từng ô lý do */
+  .reason-item {
+    flex: 1;                            /* Mỗi ô chiếm 1 phần không gian đều */
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;            /* Chia ảnh và nội dung theo chiều dọc */
+    align-items: center;
+    max-width: 240px;                  /* Giới hạn chiều rộng của mỗi ô */
+    margin-bottom: 20px;               /* Khoảng cách giữa các ô khi xuống dòng */
+  }
+  
+  .reason-item:hover {
+    transform: translateY(-10px);      /* Nâng lên khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Đổ bóng khi hover */
+  }
+  
+  /* Thiết kế ảnh minh họa */
+  .reason-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .reason-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                /* Đảm bảo ảnh chiếm đầy khu vực */
+    transition: transform 0.3s ease;
+  }
+  
+  .reason-item:hover .reason-img img {
+    transform: scale(1.1);            /* Phóng to ảnh khi hover */
+  }
+  
+  /* Nội dung text trong mỗi ô */
+  .reason-text {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .reason-text h3 {
+    font-size: 22px;
+    font-weight: 700;                  
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .reason-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    font-family: 'Baloo 2', sans-serif;
+  }
+  /* Thanh điều hướng ở cuối trang */
+.footer {
+    background-color: #064385; /* Màu xanh giống với thanh điều hướng trên */
+    color: #fff; /* Màu chữ trắng cho nội dung */
+    text-align: center; 
+    padding: 40px 20px; /* Khoảng cách trên/dưới và trái/phải */
+    position: relative;
+    font-family: 'Montserrat', sans-serif; /* Phông chữ nghiêm túc và hiện đại */
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-title {
+    font-size: 36px; /* Kích thước chữ lớn cho tên */
+    font-weight: 700; /* Chữ đậm nổi bật */
+    margin-bottom: 10px; /* Khoảng cách giữa tên và phần thông tin phía dưới */
+    font-family: 'Montserrat', sans-serif; /* Phông chữ nghiêm túc và hiện đại */
+  }
+  
+  .footer-subtitle {
+    font-size: 20px; /* Kích thước chữ nhỏ hơn */
+    font-weight: 500; 
+    color: #f0f8ff; /* Màu nhẹ hơn một chút cho dòng này */
+    font-family: 'Baloo 2', sans-serif; /* Phông chữ rõ ràng, dễ đọc */
+  }
+  
+  /* Hiệu ứng mượt mà khi cuộn đến cuối trang */
+  .footer-title, 
+  .footer-subtitle {
+    animation: slideUp 1.5s ease-in-out; 
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
